@@ -20,8 +20,9 @@ public class MainRESTController {
      *
      * @return
      */
-    @RequestMapping(value = "/corpsso", method = RequestMethod.GET)
-    String corpsso() {
+    @PostMapping(value = "/corpsso")
+    public String corpsso(@RequestBody String payload) throws Exception{
+
         return "Corpsso called!";
     }
 
@@ -34,6 +35,12 @@ public class MainRESTController {
 
         System.out.println(payload);
 
-        return payload;
+        String var = "{\n" +
+                    "                \"D\": {\n" +
+                    "            \"text\": \"Hiba conf testing\"\n" +
+                    "        }\n" +
+                    "}";
+
+        return var;
     }
 }
