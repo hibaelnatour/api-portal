@@ -41,8 +41,17 @@ public class MainRESTController {
 
         System.out.println(payload);
 
-        String data = "";
-        data = new String(Files.readAllBytes(Paths.get("src/main/resources/test.json")));
+        String data = "{\n" +
+                "  \"A\": {\n" +
+                "    \"text\": \"fix conf\"\n" +
+                "  },\n" +
+                "  \"B\": {\n" +
+                "    \"text\": \"admin conf\"\n" +
+                "  },\n" +
+                "  \"C\": {\n" +
+                "    \"text\": \"user conf\"\n" +
+                "  }\n" +
+                "}";
         return data;
     }
 
