@@ -6,6 +6,9 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 @RestController
@@ -40,6 +43,9 @@ public class MainRESTController {
     public String transformation(@RequestBody String payload) throws Exception{
 
         System.out.println(payload);
+        Date date = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd_hh-mm-ss");
+        String strDate = dateFormat.format(date);
 
         String data = "{\n" +
                 "  \"A\": {\n" +
@@ -49,7 +55,7 @@ public class MainRESTController {
                 "    \"text\": \"admin conf\"\n" +
                 "  },\n" +
                 "  \"C\": {\n" +
-                "    \"text\": \"user conf\"\n" +
+                "    \"text\": \"user conf\"" + strDate + "\n" +
                 "  }\n" +
                 "}";
         return data;
