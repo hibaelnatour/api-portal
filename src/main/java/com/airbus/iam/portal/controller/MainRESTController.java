@@ -36,9 +36,9 @@ public class MainRESTController {
         System.out.println(payload);
 
         String var = "{\n" +
-                    "                \"D\": {\n" +
-                    "            \"text\": \"Hiba conf testing\"\n" +
-                    "        }\n" +
+                    "     \"E\": {\n" +
+                    "        \"text\": \"Hiba conf testing\"\n" +
+                    "     }\n" +
                     "}";
 
         return var;
