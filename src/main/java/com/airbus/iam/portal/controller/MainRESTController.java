@@ -32,6 +32,8 @@ public class MainRESTController {
         LOGGER.info("//////////////////////////////////");
         LOGGER.info("Git URL" + gitUrl);
         LOGGER.info("//////////////////////////////////");
+        LOGGER.info("//////////////////////////////////");
+        LOGGER.info("//////////////////////////////////");
 
         return "Hello !!!";
     }
